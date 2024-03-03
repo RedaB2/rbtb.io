@@ -510,17 +510,17 @@ img {
 .skills__python{
   width: 90%;
 }
-.skills__c{
+.skills__tsjs{
   width: 85%;
 }
-.skills__html{
+.skills__htmlcss{
   width: 80%;
 }
-.skills__javascript{
+.skills__cc{
   width: 50%;
 }
 
-.skills__typescript{
+.skills__csharp{
   width: 30%;
 }
 .skills__english{
@@ -534,7 +534,7 @@ img {
 }
 
 .skills__arabic{
-  width: 10%;
+  width: 20%;
 }
 .skills__problem{
   width: 70%;
@@ -585,7 +585,7 @@ img {
 }
 
 .qualification__icon{
-  font-size: 1.rem;
+  font-size: 1.5rem;
   margin-right: var(--mb-0-25);
 }
 
