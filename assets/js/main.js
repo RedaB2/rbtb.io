@@ -180,3 +180,41 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+
+
+// RECRUITER POPUP
+
+window.onload = function() {
+    if (!sessionStorage.getItem('popupDisplayed')) {
+        document.getElementById('recruiter-popup').style.display = 'flex';
+    }
+}
+
+function submitRecruiter() {
+    const email = document.getElementById('recruiter-email').value;
+    if (email) {
+        fetch('/submit-recruiter', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email: email }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+            sessionStorage.setItem('popupDisplayed', true);
+            closePopup();
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    } else {
+        alert("Please enter a valid email.");
+    }
+}
+
+function closePopup() {
+    document.getElementById('recruiter-popup').style.display = 'none';
+}
