@@ -194,7 +194,7 @@ window.onload = function() {
 function submitRecruiter() {
     const email = document.getElementById('recruiter-email').value;
     if (email) {
-        fetch('/submit-recruiter', {
+        fetch('https://rbtbio1-07b1da6ae36f.herokuapp.com/submit-recruiter', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
