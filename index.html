@@ -197,7 +197,7 @@
                             <div class="skills__data">
                                 <div class="skills__titles">
                                     <h3 class="skills__name">Swift</h3>
-                                    <span class="skills__number">80%</span>
+                                    <span class="skills__number">85%</span>
                                 </div>
                                 <div class="skills_bar">
                                     <span class="skills__percentage skills__htmlcss"></span>
@@ -419,13 +419,10 @@
                             <!--==================== QUALIFICATION 2====================-->
                             <div class="qualification__data">
                                 <div></div>
-                                
-
                                 <div>
                                     <span class="qualification__rounder"></span>
                                     <span class="qualification__line"></span>
                                 </div>
-
                                 <div>
                                     <h3 class="qualification__title">Digital Risk Analyst Intern</h3>
                                     <span class="qualification__subtitle">Schneider Electric</span>
@@ -447,7 +444,23 @@
                                 </div>
                                 <div>
                                     <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+                            </div>
+                            <!--==================== QUALIFICATION 4====================-->
+                            <div class="qualification__data">
+                                <div></div>
+                                <div>
+                                    <span class="qualification__rounder"></span>
                                     <!--<span class="qualification__line"></span>-->
+                                </div>
+                                <div>
+                                    <h3 class="qualification__title">Cybersecurity Software Automation Intern</h3>
+                                    <span class="qualification__subtitle">Schneider Electric</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        September 2024 - Present
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -524,11 +537,19 @@
                                     </li>
                                     <li class="services__modal-service">
                                         <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>Middle Eastern & North African Student Association 🇲🇦 </p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
                                         <p>Cybersecurity Club 🧑🏽‍💻 </p>
                                     </li>
                                     <li class="services__modal-service">
                                         <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p>Women in Computer Science 🙋🏽‍♀️ </p>
+                                        <p>Society of Asian Scientists and Engineers 🧪</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>National Society of Leadership & Success 🤝 </p>
                                     </li>
                                 </ul>
                             </div>
@@ -554,6 +575,10 @@
                                     <li class="services__modal-service">
                                         <i class="uil uil-check-circle services__modal-icon"></i>
                                         <p>Building Desktops 🖥️ </p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>iOS/VisionOS Development 📱 👓 </p>
                                     </li>
                                     <li class="services__modal-service">
                                         <i class="uil uil-check-circle services__modal-icon"></i>
@@ -768,13 +793,14 @@
         <!--==================== RECRUITER POPUP ====================-->
         <div id="recruiter-popup" class="popup-container" style="display: none;">
             <div class="popup-content">
-            <h3 class="popup-title">Are you a recruiter?</h3>
-            <p class="popup-description">Please enter your email address.</p>
-            <input type="email" id="recruiter-email" class="popup-input" placeholder="Enter your email" required>
-            <div class="popup-buttons">
-                <button onclick="submitRecruiter()" class="button button--flex">Submit</button>
-                <button onclick="closePopup()" class="button button--flex button--link">Close</button>
-            </div>
+                <h3 class="popup-title">Hey there 👋🏽 Let's get in touch?</h3>
+                <p class="popup-description">Please enter your email address.</p>
+                <input type="email" id="recruiter-email" class="popup-input" placeholder="Enter your email" required>
+                <p id="email-error" class="error-message" style="display: none; color: red; font-size: 0.8rem;"></p>
+                <div class="popup-buttons">
+                    <button onclick="validateAndSubmit()" class="button button--flex popup-button popup-button--submit">Submit</button>
+                    <button onclick="closePopup()" class="button button--flex button--link popup-button popup-button--close">Close</button>
+                </div>
             </div>
         </div>
     </body>

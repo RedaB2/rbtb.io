@@ -191,6 +191,36 @@ window.onload = function() {
     }
 }
 
+
+
+function closePopup() {
+    document.getElementById('recruiter-popup').style.display = 'none';
+}
+
+function validateAndSubmit() {
+    const emailInput = document.getElementById('recruiter-email');
+    const emailError = document.getElementById('email-error');
+    const email = emailInput.value.trim();
+
+    // Regular expression for email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (email === '') {
+        showError('Please enter an email address.');
+    } else if (!emailRegex.test(email)) {
+        showError('Please enter a valid email address.');
+    } else {
+        emailError.style.display = 'none';
+        submitRecruiter(); // Call the original submit function
+    }
+}
+
+function showError(message) {
+    const emailError = document.getElementById('email-error');
+    emailError.textContent = message;
+    emailError.style.display = 'block';
+}
+
 function submitRecruiter() {
     const email = document.getElementById('recruiter-email').value;
     if (email) {
@@ -213,8 +243,4 @@ function submitRecruiter() {
     } else {
         alert("Please enter a valid email.");
     }
-}
-
-function closePopup() {
-    document.getElementById('recruiter-popup').style.display = 'none';
 }
