@@ -129,23 +129,53 @@ body.dark-theme{
   color: var(--text-color);
 }
 
+.popup-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-width: 100px;
+  border: none; /* Add this line to remove the default border */
+  outline: none; /* Add this line to remove the focus outline */
+}
+
 .popup-buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
-.popup-buttons .button {
-  width: 48%;
+.popup-button--submit {
+  background-color: var(--first-color);
+  color: #fff;
 }
 
-.popup-buttons .button--link {
+.popup-button--close {
   background-color: transparent;
-  color: var(--text-color-light);
+  color: var(--first-color);
+  border: 1px solid var(--first-color);
 }
 
-.popup-buttons .button--link:hover {
-  background-color: transparent;
-  color: var(--text-color);
+.popup-button:hover {
+  transform: scale(1.05);
+}
+
+.popup-button--submit:hover {
+  background-color: var(--first-color-alt);
+}
+
+.popup-button--close:hover {
+  background-color: var(--first-color-lighter);
+  color: var(--first-color-alt);
+}
+
+/* Add this to ensure the button looks good when focused */
+.popup-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--first-color-lighter);
 }
 
 /*========== Button Dark/Light ==========*/
@@ -589,7 +619,7 @@ img {
   width: 85%;
 }
 .skills__htmlcss{
-  width: 80%;
+  width: 85%;
 }
 .skills__cc{
   width: 80%;
