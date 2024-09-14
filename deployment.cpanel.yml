@@ -2,6 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/bo78ja8y9en8/public_html/
-    - /bin/mkdir -p $DEPLOYPATH
-    - /bin/cp index.html $DEPLOYPATH
-    - /bin/cp -R assets $DEPLOYPATH
+    - /bin/cp -R assets "$DEPLOYPATH"
+    - /bin/cp index.html "$DEPLOYPATH"
