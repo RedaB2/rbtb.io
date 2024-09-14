@@ -1,11 +1,5 @@
 ---
 deployment:
   tasks:
-    # Set the deployment path (replace with the correct path for your cPanel public_html directory)
     - export DEPLOYPATH=/home/bo78ja8y9en8/public_html/
-    
-    # Copy the index.html file to the deployment path
-    - /bin/cp index.html $DEPLOYPATH
-    
-    # Copy the entire assets directory (recursively) to the deployment path
-    - /bin/cp -R assets $DEPLOYPATH
+    - /bin/cp -r * $DEPLOYPATH
